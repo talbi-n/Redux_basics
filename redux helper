@@ -1,0 +1,37 @@
+what is redux :
+  -layer on top of react
+  - helps with state management (data in app and UI state )
+Why redux : 
+  - central data store of app
+  - all component can access data from it 
+  -makes state management easy 
+
+
+
+
+exemple : 
+ 1-without redux :
+                
+                         app.js 
+                         
+          Blog                        HomePage
+             
+ lates blogs  comments             SideBar   Maincontent   
+ NB : Blog and Sidebar component can access to redux data center
+ 2-with redux :
+                                  app.js 
+                         
+          Blog  ------->   |Redux a central data store|             HomePage
+             
+ lates blogs  comments                                |-------- SideBar   Maincontent 
+ 
+ 
+
+
+ get access to data : 
+   1- If we have changes component subscrib in Redux the changes 
+   2- redux return data as props
+ make changes :
+  1- component dispatch actions  with optional payload (data)
+  2- action passed to reducers
+  3- reducer update the central state
